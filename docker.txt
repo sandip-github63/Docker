@@ -1,0 +1,156 @@
+
+
+Demon --> maintain all images 
+
+Desktop --> Show all containers
+
+
+**************************************************************************************************************************
+
+docker run -it ubuntu 
+
+it --> interactive mode 
+ubuntu --> name of the image
+
+
+website name
+*************************
+hub.docker.com
+
+
+
+*****************************************************
+
+
+Images vs Container
+
+Images --> Image is like OS.
+
+Container --> Container is like as Laptop . So laptop required OS to run . Similarly container requried the image to run.
+
+
+Note: you can run multiple single image in more than one container.
+
+Container is isolated itself. one container data is not may affected on another container data.
+
+When you install one image in docker like ubuntu and use two terminal to connect different two container then both container can 
+use the same the image.
+
+when you open terminal and try to connect docker run -it ubuntu this will create one container for you. and suppose you are trying to 
+open one new terminal again and hit the same command docker run -it ubuntu  then again new container will be create with different id 
+by using the same ubuntu image.
+
+*****************************************************************************
+
+How to create Custom Image
+
+--> custom image is kind of image where you can customize various tool in a single group and used that image for different container .
+
+Example : 
+
+                My Ubuntu
+                ***************
+                node js
+                angular 
+                Java 17
+                oracle 19
+                
+                
+                Here : my ubuntu is a custom image create by developer so whenever any container use this image then by default all the 
+                packaged software are got.
+                Also you can publish this image in docker hub website and also deployed in AWS
+                
+                
+                Note : A container can run with any images either ubuntu or node or java 
+       
+       
+****************************************************************************************************************************************************
+
+SOME IMPORTANT DOCKER COMMAND 
+
+ Command name                               Discription
+ *******************************************************************
+ docker container ls                   To List out only current running container  
+ 
+ docker container ls -a                To List out all container name 
+ 
+ docker start conatinername            To start stoped container .
+ 
+ docker stop  containername            To stop started container.
+ 
+ docker exec containername ls          This command first connect with mentioned container name and execute the command ls then disconnect again.
+ 
+ docker exec -it containername ls      This command first connect with container then execute the ls command with No disconnect.
+ 
+ 
+ docker run -it ubuntu                 This command create new container with ubuntu image in interactive mode means with connection.
+ 
+ docker images                         You can list all installed images in docker.
+ 
+ 
+ docker image ls                       same command 
+ 
+ docker login                          Login to push the image in docker hub
+ 
+ 
+ 
+ *************************************************************************************************************************************
+ 
+ Port mapping 
+ 
+ 
+ Port exposing --> Container are isolated means suppose you have angular running on contianer with port 4200 then this is 
+                   running in your internal container and suppose you try to access it from your external Laptop's browser 
+                   then it will not work . because container are isolated on that case you need to expose the port.
+                   
+ 
+ port exposing command 
+ ************************
+ docker run -it -p 1025:1025 imagename 
+ 
+ 
+ -p : port mapping 
+ 1025:1025 : right side 1025 means container's port should be expose with my PC's port 1025 which is mentionded in left side. 
+ 
+ 
+ 
+********************************************************************************************************************************************
+
+Envrionment Variable 
+
+
+  docker run -it -p 1025:1025 -e key=value -e key=value imagename 
+  
+  
+*****************************************************************************************************************************
+
+Dockerization (create customer image)
+************************************************
+1) create files 
+2) create Dockerfile 
+3) sudo docker build -t youtube-nodejs .   run this command for dockerisation
+
+
+
+
+
+  
+ 
+                  
+ 
+ 
+ 
+ 
+  
+                
+                
+                
+
+
+
+
+
+
+
+
+
