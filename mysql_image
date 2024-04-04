@@ -1,0 +1,14 @@
+
+Download and Run Mysql in Docker 
+
+*********************************
+
+1) pull the image of mysql from docker hub example docker pull mysql
+2) docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  
+      note: replace some_mysql name with actual docker image name 
+3) docker exec -it some-mysql bash
+4) mysql -p 
+5) then enter your mysql password 
+
+
+      

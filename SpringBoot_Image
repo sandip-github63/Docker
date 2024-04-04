@@ -1,0 +1,13 @@
+Create Custom Image for SpringBoot Application 
+**********************************************************************************************************************
+
+1) Create Spring Boot Application
+2) Build jar file 
+3) create folder on any path 
+4) open vs code on that path 
+5) copy the jar file and past in vs code 
+6) create Dockerfile 
+7) create the image and run 
+
+
+
